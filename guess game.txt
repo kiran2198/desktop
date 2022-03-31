@@ -1,0 +1,40 @@
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void main() 
+{
+    int num, n, c=1, lower, upper;
+     printf(" *******************welcome to Guess the Number Challenge****************");
+     printf("\n Rules: \n > Enter range of numbers to play from ");
+     printf("System will choose a number now, You have to guess it. \n All the best :)\n");
+     printf("Enter lower and upper limit :");
+     scanf("%d%d",&lower,&upper);
+     srand(time(0));
+     num=(rand()%(upper-lower+1))+lower;
+     
+     while(1)
+     {
+         printf("\n Guess Anumber : ");
+         scanf("%d",&n);
+         
+         if(n==num)
+         {
+             printf("\nYass!!\n your guess is corect in %d turns.",c);
+             break;
+         }
+         else if(n<num)
+         {
+             printf("\n Your guess is smaller.\n");
+             c++;
+         }
+         else
+         {
+             printf("your guess is Greater. \n");
+             c++;
+         }
+     }
+      printf("\n created by *****MADHURI MADDULA****\n");
+ }
